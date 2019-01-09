@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html>
+
+<style>
+	.solution{display: none;color: red}
+	.solution2{display: none;color: red}
+	.solution3{display: none;}
+	.solution5{display: none;}
+	.part2{display:none }
+	.part3{display:none }
+	.part4{display: none;}
+	.part5{display: none;}
+	.b{width: 2px}
+	.picture{width: 50px;height:0px ;position: absolute;top:400px;left: 400px;background-color: red; }
+	.bigpicture{width: 500px;height:1000px ;position: absolute;top:400px;left:100px;background-color: green; }
+	.pass{width:500px;height: 100px;background-color:yellow;position: absolute;left:100px;top:1400px;  }
+	h1{font-family:DFKai-sb;font-size:250%}
+	h2{font-family:DFKai-sb;font-size:150%}
+	h3{font-family:DFKai-sb;font-size:125%}
+	p{font-family:DFKai-sb;font-size:125%}
+	.back{background-image:url(1-1PH11205090-L.jpg);background-repeat:no-repeat;background-size: cover;width:100%;position: absolute;top:0px; }
+	body{margin:0px;padding: 0px;border-top: 0px;}
+</style>
+
+<head>
+	<meta charset="utf-8">
+</head>
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+<script src="jquery-3.3.1.min.js"></script>
+<script>
+	var score=0
+	var score2=0
+	var score3=0
+	var score4=0
+function question(){
+var answer1=document.getElementById("answer1").value;
+var answer2=document.getElementById("answer2").value;
+var answer3=document.getElementById("answer3").value;
+var answer4=document.getElementById("answer4").value;
+var answer5=document.getElementById("answer5").value;
+var answer6=document.getElementById("answer6").value;
+var answer7=document.getElementById("answer7").value;
+var answer8=document.getElementById("answer8").value;
+var answer9=document.getElementById("answer9").value;
+var answer10=document.getElementById("answer10").value;
+score=0
+var d1=document.getElementById("d1")
+var d2=document.getElementById("d2")
+var d3=document.getElementById("d3")
+var d4=document.getElementById("d4")
+if (answer1=="20"||answer1=="20年"){
+	score=score+5
+}
+if (answer2=="tainan"||answer2=="taiwan") {
+	score=score+5
+}
+if (answer3=="japan") {
+	score=score+5
+}
+if (answer4=="美元"||answer4=="美金"||answer4=="京") {
+	score=score+5
+}
+if (answer5=="章氏集團"||answer5=="章氏企業") {
+	score=score+5
+}
+if (answer6=="江玟嶸"||answer6=="玟嶸"||answer6=="章魚") {
+	score=score+5
+}
+if (answer7=="1"||answer7=="第1"||answer7=="第1名") {
+	score=score+5
+}
+if (answer8=="書"||answer8=="故事書"||answer8=="課外書"||answer8=="課外讀物") {
+	score=score+5
+}
+if (answer9=="吳家德") {
+	score=score+5
+}
+if (answer10=="嚴長壽"||answer10=="嚴長壽先生") {
+	score=score+5
+}
+alert("你總共得到"+score+""+"分");
+d1.innerHTML="第一部分共得"+score+"分";
+}
+function question2(){
+var answer11=document.getElementById("answer11").value;
+var answer12=document.getElementById("answer12").value;
+var answer13=document.getElementById("answer13").value;
+var answer14=document.getElementById("answer14").value;
+var answer15=document.getElementById("answer15").value;
+var answer16=document.getElementById("answer16").value;
+var answer17=document.getElementById("answer17").value;
+var answer18=document.getElementById("answer18").value;
+var answer19=document.getElementById("answer19").value;
+var answer20=document.getElementById("answer20").value;
+score2=0
+if (answer11=="0"){
+	score2=score2+5
+}
+if (answer12=="是") {
+	score2=score2+5
+}
+if (answer13=="藍") {
+	score2=score2+5
+}
+if (answer14=="無稽之談") {
+	score2=score2+5
+}
+if (answer15=="A") {
+	score2=score2+5
+}
+if (answer16=="200") {
+	score2=score2+5
+}
+if (answer17=="宜蘭") {
+	score2=score2+5
+}
+if (answer18=="法國") {
+	score2=score2+5
+}
+if (answer19=="人民幣") {
+	score2=score2+5
+}
+if (answer20=="嚴長壽") {
+	score2=score2+5
+}
+alert("你總共得到"+score2+""+"分");
+d2.innerHTML="第二部分共得"+score2+"分";
+}
+var countdownnumber=5;
+var i = 0
+score3= $(".b").length
+function play(){
+	setInterval(add,1000);
+  countdownnumber=5;
+  y=document.getElementById("test");
+  y.innerHTML=score3
+  x=document.getElementById("countdown");
+  x.innerHTML=countdownnumber;
+  countdownnumber--;
+  countdownid=window.setInterval(countdownfunc,1000);}
+function countdownfunc(){ 
+  x.innerHTML=countdownnumber;
+  countdownnumber--;
+  score3= $(".b").length;
+  		  y.innerHTML=score3
+
+if (countdownnumber==0){  
+    clearInterval(countdownid);
+    alert("第三部分共得"+20*score3+"分")
+    $(".solution3").toggle();
+    d3.innerHTML="第三部分共得"+20*score3+"分";
+    }
+  }
+function add(){
+	if(countdownnumber>0){
+		$("#ball").append("<img src='未命名.png'>")
+		$(document).ready(function(){
+	$("div").on("click",'img',function(){
+  		$(this).hide("slow");
+  		$(this).attr('class','b');
+  		$(".b").length;
+	});
+});
+	}
+}
+var countdownnumber2=5
+function initial2(){
+  i=0
+   countdownnumber2=5
+  play=1
+  x=document.getElementById("countdown2");
+  x.innerHTML=countdownnumber2;
+  countdownnumber2--;
+  countdownid2=window.setInterval(countdownfunc2,1000);
+}
+function countdownfunc2(){ 
+  x.innerHTML=countdownnumber2;
+  countdownnumber2--;
+  if (countdownnumber2==0){
+    alert("總共按了"+i+"次,開始下個階段");   
+    clearInterval(countdownid2);
+  } 
+}
+  function count(){
+   if(play==1)
+   if(countdownnumber2>0){
+    i++; document.getElementById('soul').style.height=10*i+"px"
+}  
+  }
+ function eval(event) {
+var elem = document.getElementById("soul");
+var x = elem.offsetLeft || 0;
+var y = elem.offsetTop || 0;
+var key = event.which || event.keyCode;
+score4=2*i;
+ if (countdownnumber2==0){
+if (y<=1400-10*i&&y>=400&&550>=x&&100<=x) {
+switch(key){
+case 38:
+elem.style.top = (y-30) + 'px';
+break;
+case 40:
+elem.style.top = (y+30) + 'px';
+break;
+case 37:
+elem.style.left = (x-30) + 'px';
+break;
+case 39:
+elem.style.left = (x+30) + 'px';
+break;
+}}
+else if(y>1400-10*i){score4=score4+60;alert("任務成功，共"+score4+"分");$(".solution5").toggle();d4.innerHTML="第四部分共得"+score4+"分"}
+else{alert("任務失敗，共"+score4+"分");$(".solution5").toggle();
+d4.innerHTML="第四部分共得"+score4+"分" }
+}}
+$(document).ready(function(){
+$("#ss").click(function(){
+$(".solution").toggle();
+});
+});
+$(document).ready(function(){
+$("#p2").click(function(){
+$(".part1").toggle();
+$(".part2").toggle();
+});
+});
+$(document).ready(function(){
+$("#ss2").click(function(){
+$(".solution2").toggle();
+});
+});
+$(document).ready(function(){
+$("#p3").click(function(){
+$(".part2").toggle();
+$(".part3").toggle();
+});
+});
+$(document).ready(function(){
+$("#p4").click(function(){
+$(".part3").toggle();
+$(".part4").toggle();
+});
+});
+$(document).ready(function(){
+$("#p5").click(function(){
+$(".part4").toggle();
+$(".part5").toggle();
+var total=score+score2+20*score3+score4
+if (total>300) {
+		var e1= document.getElementById("d6");
+		e1.innerHTML="通過，人才"
+	}
+	else{var e1= document.getElementById("d6");
+	e1.innerHTML="蕭總裁不需要你"
+	};
+google.charts.load('current', {packages: ['corechart', 'bar']});
+google.charts.setOnLoadCallback(drawBasic);
+function drawBasic(){
+  var data = new google.visualization.arrayToDataTable([
+['考試內容', '分數'],
+['術科筆試', score+score2], ['爆發力',20*score3], ['閱讀能力測試',score4], ['總和', total],['平均',total/3] 
+]);
+  var options = {
+title: '蕭氏集團試驗結果',
+hAxis: { title: '評分項目'},
+vAxis: {title: '分數'}
+};
+var chart = new google.visualization.ColumnChart(document.getElementById('chart_div'));
+chart.draw(data, options);
+}
+});})
+</script>
+<body onkeydown="eval(event)">
+	<div class="back">
+	<h1>第20屆蕭氏集團筆試</h1>
+<form class="part1">
+	<h3>第一部分(共50分)</h3>
+	<p>(以下答案不得有空格且依指定條件回答，否則0分計算)</p>
+</form>
+<form class="part1">
+<h2>1.蕭氏集團經營創立幾年？(僅限阿拉伯數字)：</h2>
+<input type="text" id="answer1">
+<p class="solution">20或20年</p>
+<br>
+<h2>2.蕭總裁的故鄉在哪裡？(僅以小寫英文回答)：</h2>
+<input type="text" id="answer2">
+<p class="solution">tainan或taiwan</p>
+<br>
+<h2>3.蕭總裁最常到哪個國家出公差？(僅以小寫英文回答)：</h2>
+<input type="text" id="answer3">
+<p class="solution">japan</p>
+<br>
+<h2>4.蕭總裁月收入以甚麼單位計算？(僅以中文回答)：</h2>
+<input type="text" id="answer4">
+<p class="solution">美元/美金/京</p>
+<br>
+<h2>5.蕭總裁的合作夥伴是哪個企業？：</h2>
+<input type="text" id="answer5">
+<p class="solution">章氏集團/章氏企業</p>
+<br>
+<h2>6.(接上題)這個企業由誰創建？：</h2>
+<input type="text" id="answer6">
+<p class="solution">江玟嶸/玟嶸/章魚</p>
+<br>
+<h2>7.(接上題)此企業在同性質集團排行第幾？(僅限阿拉伯數字)：</h2>
+<input type="text" id="answer7">
+<p class="solution">1/第1/第1名</p>
+<br>
+<h2>8.蕭總裁從小家裡只有甚麼？：</h2>
+<input type="text" id="answer8">
+<p class="solution">書/故事書/課外書/課外讀物</p>
+<br>
+<h2>9.蕭總裁最喜歡哪個作家？：</h2>
+<input type="text" id="answer9">
+<p class="solution">吳家德</p>
+<br>
+<h2>10.蕭總裁最向誰看齊？：</h2>
+<input type="text" id="answer10">
+<p class="solution">嚴長壽/嚴長壽先生</p>
+<br>
+<button type="button" onclick="question()" id="ss">Check!</button>
+<button type="button" class="solution" style="color:black" id="p2">下一部分</button>
+</form>
+<form class="part2">
+	<h3>第二部分(共50分)</h3>
+	<p>(以下答案不得有空格且依指定條件回答，否則0分計算)</p>
+</form>
+<form class="part2" >
+	<h2>1.常數微分為何？(請填入阿拉伯數字)：</h2>
+<input type="text" id="answer11">
+<p class="solution2">0</p>
+<br>
+<h2>2.多項式是不是處處可微(請回答是或否)：</h2>
+<input type="text" id="answer12">
+<p class="solution2">是</p>
+<br>
+<h2>3.貓頭鷹是唯一能夠分辨_色的鳥(hint:彩虹的顏色之一)：</h2>
+<input type="text" id="answer13">
+<p class="solution2">藍</p>
+<br>
+<h2>4.一隻鯨魚一分鐘心跳有_下，(A)9(B)90(C)900下：</h2>
+<input type="text" id="answer14">
+<p class="solution2">A</p>
+<br>
+<h2>5.太監開會猜一個成語，請填入括號內其中之一(自生自滅/參差不齊/無稽之談/比手畫腳)：</h2>
+<input type="text" id="answer15">
+<p class="solution2">無稽之談</p>
+<br>
+<h2>6.臺灣的統一發票中獎金額最少是多少：100/200/50/300</h2>
+<input type="text" id="answer16">
+<p class="solution2">200</p>
+<br>
+<h2>7.0.清朝時的地名「蛤仔難」位於今日台灣何縣市？ 
+台南/桃園/宜蘭/台東：</h2>
+<input type="text" id="answer17">
+<p class="solution2">宜蘭</p>
+<br>
+<h2>8.二次大戰期間的諾曼第登陸，發生在哪一個國家？法國/美國/西班牙/荷蘭</h2>
+<input type="text" id="answer18">
+<p class="solution2">法國</p>
+<br>
+<h2>9.2.PMB是指什麼貨幣
+人民幣/加幣/歐元/美金</h2>
+<input type="text" id="answer19">
+<p class="solution2">人民幣</p>
+<br>
+<h2>10.在哈利波特中不會魔法的人稱為？小黃瓜/南瓜/麻瓜/絲瓜</h2>
+<input type="text" id="answer20">
+<p class="solution2">麻瓜</p>
+<button type="button" onclick="question2()" id="ss2">Check!</button>
+<button type="button" class="solution2" style="color:black" id="p3">下一部分</button>
+</form>	
+<form class="part3">
+	<h1>蕭氏集團社員爆發力檢測</h1>
+<button type="button" onclick="play()">開始</button>
+<button type="button" class="solution3"; style="color:black" id="p4">下一部分</button>
+<h2>時間</h2>
+<div id="countdown"> </div> 
+<h2>得分:</h2><div id="test"></div>
+<div id="ball">
+<img src="未命名.png" >
+<img src="未命名.png" >
+<img src="未命名.png" >
+<img src="未命名.png" >
+<img src="未命名.png" >
+<img src="未命名.png" >
+<img src="未命名.png" >
+<img src="未命名.png" > 
+</div>
+</form>
+<form class="part4">
+	 <h1>蕭氏集團閱讀能力測試</h1>
+ <h2>遊戲方法:請在五秒內連續點擊pass鍵，五秒後會出現下一個指示</h2>
+<p>倒數時間:</p>
+<div id="countdown2"></div> 
+<button type="button" onclick="initial2()">開始</button>
+
+<button type="button" onclick="count()">pass</button>
+<div class="bigpicture"></div>
+<div class="picture" id="soul"></div>
+  <div class="picture" id="soul"><p style="position:absolute;color:green;">請以上下左右移動這塊矩形，往下移動到終點(碰到綠色邊框失敗)</p>
+   </div>
+   <div class="pass"><p style="color:white;font-size:35px;text-align: center">終點</p></div>
+   	<button type="button" class="solution5" id="p5">結算</button>
+ </form>
+ <form  class="part5"> 
+ <p id="d1"></p>
+ <p id="d2"></p>
+ <p id="d3"></p>
+ <p id="d4"></p>
+ <p id="d5"></p>	
+ <h1 id="d6"></h1>
+ <div id="chart_div"></div>
+ <button type="button" onclick="location.reload()">重新挑戰</button>
+  </form>
+  </div>
+</body></html>
