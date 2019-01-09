@@ -248,10 +248,13 @@ $(".part5").toggle();
 var total=score+score2+20*score3+score4
 if (total>300) {
 		var e1= document.getElementById("d6");
-		e1.innerHTML="通過，人才"
+		var e2=document.getElementById("d7");
+		e1.innerHTML="通過，人才";e2.src="1.png"
 	}
 	else{var e1= document.getElementById("d6");
-	e1.innerHTML="蕭總裁不需要你"
+	var e2=document.getElementById("d7");
+	e1.innerHTML="蕭總裁不需要你";
+	e2.src="2.gif"
 	};
 google.charts.load('current', {packages: ['corechart', 'bar']});
 google.charts.setOnLoadCallback(drawBasic);
@@ -410,7 +413,8 @@ chart.draw(data, options);
  <p id="d4"></p>
  <p id="d5"></p>	
  <h1 id="d6"></h1>
- <div id="chart_div"></div>
+  <img id="d7">
+  <div id="chart_div"></div>
  <button type="button" onclick="location.reload()">重新挑戰</button>
   </form>
   </div>
